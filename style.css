@@ -1,0 +1,146 @@
+/* Reset */
+* {
+  /* Reset */
+  box-sizing: border-box;
+  /* the width and height of an element is only calculated based on its content */
+  margin: 0;
+  padding: 0;
+}
+
+/* Page Colors */
+:root {
+  --page-1-color: #4682b4;
+  --page-2-color: #d2b48c;
+  --page-3-color: #008080;
+  --page-4-color: #6a5acd;
+  --page-5-color: #232b43;
+  --dark-utility-color: #333;
+  --white-utility-color: #fff;
+  --animate-speed: 6s;
+  --transition-speed: 0.3s;
+
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: var(--white-utility-color);
+  overflow:hidden;
+
+}
+
+/* Styling for all pages */
+.page {
+  height: 100vh;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 2rem;
+}
+/* H1 Style */
+h1 {
+  font-size: 4rem;
+  line-height: 1.2;
+  margin: 1rem;
+}
+
+/* Paragraph Style */
+p{
+  font-size: 1.3rem;
+
+}
+
+/* Button Style */
+.btn{
+  text-decoration: none;
+  color: var(--white-utility-color);
+  padding: 1rem 2rem;
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  border: none;
+  transition: all var(--transition-speed) ease-in;
+}
+
+@keyframes move-h1 {
+  0% {
+    transform: translateY(-400000px);
+  }
+  50% {
+    transform: translateY(-10000px);
+  } 
+  75%{
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+#page-1 h1{
+  animation-name: move-h1;
+  animation-duration: var(--animate-speed);
+  animation-timing-function: linear;
+  animation-delay: -2s;
+}
+
+@keyframes move-p {
+  0% {
+    transform: translateX(-400000px);
+  }
+  50% {
+    transform: translateX(-10000px);
+  } 
+  75%{
+    transform: translateX(-50px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+#page-1 p{
+  animation-name: move-p;
+  animation-duration: var(--animate-speed);
+  animation-timing-function: linear;
+  animation-delay: -1s;
+}
+
+
+
+.btn-light:hover,
+.btn-dark{
+  background-color: var(--dark-utility-color);
+  color: var(--white-utility-color);
+}
+
+
+.btn-dark:hover,
+.btn-light
+{
+  background-color: var(--white-utility-color);
+  color: var(--dark-utility-color);
+}
+
+
+#page-1 {
+  background-color: var(--page-1-color);
+}
+
+#page-2 {
+  background-color: var(--page-2-color);
+}
+
+#page-3 {
+  background-color: var(--page-3-color);
+}
+
+#page-4 {
+  background-color: var(--page-4-color);
+}
+
+#page-5 {
+  background-color: var(--page-5-color);
+}
