@@ -64,6 +64,23 @@
       repellendus in velit placeat laborum enim, quia magni! Iste iusto quod similique minima voluptates eaque!</p>
     <div><a href="#page-4" class="btn btn-light">Prev Page <i class="fa-sharp fa-solid fa-circle-up"></i></a></div>
   </section>
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+  <script>
+    //Smooth scrolling
+    $('.btn').on('click', function(event){
+      if(this.hash !== ''){
+        event.preventDefault();
+        const hash = this.hash;
+        $('html, body').animate(
+          {
+            scrollTop: $(hash).offset().top
+          },
+          600
+    );
+      }
+    });
+  </script>
 
 
 </body>

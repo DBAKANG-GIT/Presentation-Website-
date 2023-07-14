@@ -16,8 +16,8 @@
   --page-5-color: #232b43;
   --dark-utility-color: #333;
   --white-utility-color: #fff;
-  --animate-speed: 6s;
-  --transition-speed: 0.3s;
+  --animate-speed: 4s;
+  --transition-speed: 0.1s;
 
 }
 
@@ -64,7 +64,7 @@ p{
   transition: all var(--transition-speed) ease-in;
 }
 
-@keyframes move-h1 {
+@keyframes move-vertical {
   0% {
     transform: translateY(-400000px);
   }
@@ -80,13 +80,14 @@ p{
 }
 
 #page-1 h1{
-  animation-name: move-h1;
+  animation-name: move-vertical;
   animation-duration: var(--animate-speed);
   animation-timing-function: linear;
+  animation-fill-mode: forwards;
   animation-delay: -2s;
 }
 
-@keyframes move-p {
+@keyframes move-horizontal {
   0% {
     transform: translateX(-400000px);
   }
@@ -102,10 +103,20 @@ p{
 }
 
 #page-1 p{
-  animation-name: move-p;
+  animation-name: move-horizontal;
   animation-duration: var(--animate-speed);
   animation-timing-function: linear;
+  animation-fill-mode: forwards;
   animation-delay: -1s;
+}
+
+#page-1 .btn{
+  animation-name: move-horizontal;
+  animation-duration: var(--animate-speed);
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-delay: -1s;
+
 }
 
 
